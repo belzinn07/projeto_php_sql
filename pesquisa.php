@@ -21,35 +21,36 @@
                     </form>
                 </nav>
                 <table class="table table-hover">
-  <thead>
-    <tr>
-      <th scope="col">Nome</th>
-      <th scope="col">Email</th>
-      <th scope="col">Ações</th>
-      
-      
-    </tr>
-  </thead>
-   <tbody>
-    <?php
-    while($linha=mysqli_fetch_assoc($dados)){
-        $id = $linha['id'];
-        $nome = $linha['nome'];
-        $email = $linha['email'];
+                    <thead>
+                        <tr>
+                            <th scope="col">Nome</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Ações</th>
 
-        echo" <tr>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php
+                        while ($linha = mysqli_fetch_assoc($dados)) {
+                            $id = $linha['id'];
+                            $nome = $linha['nome'];
+                            $email = $linha['email'];
+
+                            echo "<tr>
         <td>$nome</td>
         <td>$email</td>
         <td width=150px><a href='editarcad.php? id=$id' class='btn btn-succes btn-sm>Editar</a>
-          <a href='' class='btn btn-danger btn-sm' data-toggle='modal' data-target='#confirma'>Excluir</a></td>
+          <a href='' class='btn btn-danger btn-sm' data-toggle='modal' data-target='#confirma'>Excluir</a>
+          </td>
         </tr>";
-    }
-    ?>
-   </tbody>
+                        }
+                        ?>
+                    </tbody>
 
-     
-  
-</table>
+
+
+                </table>
 
 
             </div>
