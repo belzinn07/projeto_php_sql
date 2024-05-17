@@ -12,9 +12,8 @@
     <?php
     $pesquisa= $_POST['busca']??'';
     include"conexao.php";
-    $sql = "SELECT * FROM usuario where nome LIKE '%$pesquisa%'";//selecione toda a tabela usuario onde a coluna nome tenha um LIKE que filtre todas as letras qu e o usuário digita
-    $dados = mysqli_query($conexao,$sql);
-    
+    $sql = "SELECT * FROM usuario where nome LIKE '%$pesquisa%'";//selecione toda a tabela usuario onde a coluna nome tenha um LIKE que filtre todas as letras que o usuário digita que esteja no inicio, no meio e no fim
+    $dados = mysqli_query($conexao,$sql);//variavel que fazerá a consulta
     ?>
     <div class="container">
         <div class="row">
@@ -39,10 +38,10 @@
                     </thead>
                     <tbody>
                         <?php
-                        while ($linha = mysqli_fetch_assoc($dados)) {
-                            $id = $linha['id'];
-                            $nome = $linha['nome'];
-                            $email = $linha['email'];
+                        while ($linha = mysqli_fetch_assoc($dados)) {//enquanto as variavel linha receber os valores de dados
+                            $id = $linha['id'];//guarda os dados puxados nessas varíaveis
+                            $nome = $linha['nome'];//guarda os dados puxados nessas varíaveis
+                            $email = $linha['email'];//guarda os dados puxados nessas varíaveis
 
                             echo "<tr>
         <td>$nome</td>
