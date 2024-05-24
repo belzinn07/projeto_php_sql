@@ -48,7 +48,7 @@
                                 <td>$email</td>
                                 <td width=150px>
                                <a href='editar.php? id=$id' class='btn btn-success btn-sm'>Editar</a>
-                               <a href='#' class='btn btn-danger btn-sm'>Excluir</a>
+                               <a href='#' class='btn btn-danger data-toggle='modal' data-target='#exampleModal' btn-sm'>Excluir</a>
                                </td>
 
                              </tr>";
@@ -66,7 +66,7 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Confirmação de exclusão</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -75,8 +75,8 @@
         ...
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Não</button>
+        <button type="button" class="btn btn-primary">Sim</button>
       </div>
     </div>
   </div>
