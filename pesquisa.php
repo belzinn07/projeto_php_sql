@@ -48,7 +48,7 @@
                                 <td>$email</td>
                                 <td width=150px>
                                <a href='editar.php? id=$id' class='btn btn-success btn-sm'>Editar</a>
-                               <a href='#' class='btn btn-danger data-toggle='modal' data-target='#exampleModal' btn-sm'>Excluir</a>
+                               <a href='#' class='btn btn-danger  btn-sm' data-toggle='modal' data-target='#confirma'>Excluir</a>
                                </td>
 
                              </tr>";
