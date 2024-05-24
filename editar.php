@@ -11,11 +11,11 @@
 <body>
     <?php 
     include("conexao.php");
-    $id = $_GET["id"] ?? '';//pega o id através do metodo GET
-    $sql = "SELECT * FROM usuario WHERE id = $id";//seleciona a tabela usuario onde vai pegar o id
+    $id = $_GET["id"] ?? '';
+    $sql = "SELECT * FROM usuario WHERE id = $id";
 
-    $dados = mysqli_query($conexao,$sql);//varívavel que faz a consulta
-    $linha = mysqli_fetch_assoc($dados);//armazena as informações das varíavel $dados
+    $dados = mysqli_query($conexao,$sql);
+    $linha = mysqli_fetch_assoc($dados);
     
     
     ?>
@@ -35,8 +35,8 @@
             <input type="password" class="form-control" name="senha"value="<?php echo $linha['senha'] ;?>">
 
             <input type="submit" class="btn btn-success" value="salvar alterações">
-            <input type="hidden"  name="id" value="<?php echo $linha['senha'] ;?>">
-           
+            <input type="hidden" name="id" value="<?php echo $linha['id'] ;?>">
+            
 
           </div>
       </div>

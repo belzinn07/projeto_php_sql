@@ -1,14 +1,14 @@
-<?php //faz a conexao com o banco de dados
-$host="localhost";
-$user="root";
-$senha="";
-$banco="provainfor";
+<?php 
+$host = "localhost";
+$user ="root";
+$senha ="";
+$banco = "provainfor";
 
-if ($conexao = mysqli_connect($host,$user,$senha,$banco)){
-   // echo"conexão realizada com sucesso";
-}else{
-  //echo"Erro na conexão";
+$conexao = new mysqli($host,$user,$senha,$banco);
+    if (!$conexao){
+    //echo 'deu errado'.mysqli_connect_error();
+} 
+else{
+    //echo 'deu certo ';
 }
-
-
 ?>
