@@ -14,8 +14,8 @@
     $id = $_GET["id"] ?? '';//pega o id através do metodo GET
     $sql = "SELECT * FROM usuario WHERE id = $id";//seleciona a tabela usuario onde vai pegar o id
 
-    $dados = mysqli_query($conexao,$sql);//
-    $linha = mysqli_fetch_assoc($dados);
+    $dados = mysqli_query($conexao,$sql);//varívavel que faz a consulta
+    $linha = mysqli_fetch_assoc($dados);//armazena as informações das varíavel $dados
     
     
     ?>
@@ -23,7 +23,7 @@
     <div class="row">
       <div class="col">
         <h1>Alteração de dados</h1>
-        <form action="cad.php" method="POST">
+        <form action="editcad.php" method="POST">
           <div class="mb-3">
             <label for="nome" class="form-label">Nome Completo</label>
             <input type="text" class="form-control" name="nome"required value="<?php echo $linha['nome'] ;?>">
@@ -34,7 +34,9 @@
             <label for="senha" class="form-label">Senha</label>
             <input type="password" class="form-control" name="senha"value="<?php echo $linha['senha'] ;?>">
 
-            <input type="submit" class="btn btn-success">
+            <input type="submit" class="btn btn-success" value="salvar alterações">
+            <input type="hidden"  name="id" value="<?php echo $linha['senha'] ;?>">
+           
 
           </div>
       </div>

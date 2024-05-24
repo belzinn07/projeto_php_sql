@@ -47,7 +47,7 @@
         <td>$nome</td>
         <td>$email</td>
         <td width=150px>
-        <a href='editcad.php? id=$id' class='btn btn-success btn-sm'>Editar</a>
+        <a href='editar.php? id=$id' class='btn btn-success btn-sm'>Editar</a>
           <a href='#' class='btn btn-danger btn-sm' >Excluir</a>
           </td>
         </tr>";
